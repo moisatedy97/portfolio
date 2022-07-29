@@ -1,6 +1,6 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image';
-import projects from './projects_array';
+import projects from '../../assets/projects_array';
 import styles from "../../styles/Home.module.scss";
 
 type Props = {

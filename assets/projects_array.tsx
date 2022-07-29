@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import {lalasiaiphone, lalasia1, lalasia2, lalasia3, lalasia4} from '../../assets'
+import {lalasiaiphone, lalasia1, lalasia2, lalasia3, lalasia4} from '.'
 
 let projects: Array<{ id: string, name: string, description: string, mainPhoto: StaticImageData, photos: Array<StaticImageData>}> = [
     {
