@@ -1,0 +1,57 @@
+.tedy__header {
+  @include display(flex-start, center, column);
+  height: 48rem;
+  position: relative;
+  .tedy__header__title {
+    @include display(flex-start, center, column);
+    line-height: 0.1rem;
+
+    h1 {
+      font-family: $--font-family;
+      font-size: 4vw;
+    }
+
+    h3 {
+      font-family: $--font-family;
+      font-size: 2vw;
+      font-style: italic;
+    }
+  }
+  .tedy__header__react {
+    width: 5%;
+    height: 10%;
+    position: relative;
+  }
+  .tedy__header__image {
+    width: 40rem;
+    height: 100%;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .tedy__header {
+    height: 40rem;
+    .tedy__header__image {
+      width: 32rem;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .tedy__header {
+    height: 35rem;
+    .tedy__header__image {
+      width: 28rem;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tedy__header {
+    height: 22rem;
+    .tedy__header__image {
+      width: 17rem;
+    }
+  }
+}

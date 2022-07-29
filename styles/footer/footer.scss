@@ -1,0 +1,31 @@
+.tedy__footer {
+    @include display(flex-start, center, column);
+    position: relative;
+    .tedy__footer__title {
+      @include display(flex-start, center, row);
+      width: 100%;
+      h1 {
+        font-family: $--font-family;
+        font-weight: 700;
+        font-size: 1.5em;
+  
+        margin: 0 1rem;
+      }
+    }
+
+    .tedy__footer__copyright {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+  .tedy__footer {
+    .tedy__footer__copyright {
+      p {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+

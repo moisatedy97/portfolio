@@ -1,0 +1,59 @@
+.tedy__navbar {
+  @include display(space-between, center, row);
+  .tedy__navbar__links {
+    @include display(flex-start, center, row);
+
+    p {
+      font-family: $--font-family;
+      font-weight: 700;
+      font-size: 1.5em;
+
+      margin: 0 1rem;
+    }
+  }
+
+  .tedy__navbar__menu {
+    position: relative;
+    display: none;
+
+    svg {
+      cursor: pointer;
+    }
+
+    .tedy__navbar__menu__container {
+      @include display(flex-end, flex-end, column);
+
+      text-align: end;
+      background-color: #C0C0C0;
+      padding: 2rem;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      margin-top: 1rem;
+      min-width: 15rem;
+      border-radius: 5px;
+      border: 1px solid black;
+      box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+      z-index: 99;
+
+      p {
+        margin: 1rem 0;
+        font-family: $--font-family;
+        font-weight: 700;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .tedy__navbar {
+    .tedy__navbar__links {
+      display: none;
+    }
+
+    .tedy__navbar__menu {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import './variables';
+@import './navbar/navbar.scss';
+@import './header/header.scss';
+@import './brand/brand.scss';
+@import './footer/footer.scss';
+
+.gradient__bg{
+  background-color: #C0C0C0;
+}
+
+.gradient__text {
+  background: rgb(126,125,125);
+  background: -moz-linear-gradient(90deg, rgba(126,125,125,1) 0%, rgba(82,81,81,1) 50%, rgba(28,28,28,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(126,125,125,1) 0%, rgba(82,81,81,1) 50%, rgba(28,28,28,1) 100%);
+  background: linear-gradient(90deg, rgba(126,125,125,1) 0%, rgba(82,81,81,1) 50%, rgba(28,28,28,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e7d7d",endColorstr="#1c1c1c",GradientType=1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+  padding: 2rem 4rem;
+}
+
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 1rem 2rem;
+  }
+}

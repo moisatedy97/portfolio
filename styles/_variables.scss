@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+$--font-family: 'Roboto', sans-serif;;
+
+$--color-text-primary: #151411;
+$--color-p: #AFADB5;
+
+$--background-primary: #518581;
+
+@mixin display($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify !important;
+    align-items: $align;
+    flex-direction: $direction;
+}
