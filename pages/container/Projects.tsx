@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "../../styles/Home.module.scss";
 import Project from './Project';
-import projects from './projects_array';
+import projects from '../../assets/projects_array';
 
 const Projects = () => {
   return (
