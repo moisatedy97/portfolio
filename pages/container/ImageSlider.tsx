@@ -3,22 +3,24 @@ import react, { useState } from "react";
 import styles from "../../styles/Home.module.scss";
 
 type Props = {
-  slides: Array<String>
+  arraySlides: Array<String>
 };
 
-const ImageSlider = ({ slides} : Props) => {
+const ImageSlider = ({ arraySlides } : Props) => {
+  const slides = arraySlides || [];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+  function goToPrevious() {
+    const isFirstSlide: boolean = currentIndex === 0;
+    const newIndex: number = (isFirstSlide ? slides.length - 1 : currentIndex - 1);
+    
     setCurrentIndex(newIndex);
   };
-  const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+  function goToNext() {
+    const isLastSlide: boolean = currentIndex === slides.length - 1;
+    const newIndex: number = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  const goToSlide = (slideIndex: number) => {
+  function goToSlide(slideIndex: number) {
     setCurrentIndex(slideIndex);
   };
 
@@ -30,7 +32,7 @@ const slideStylesWidthBackground = {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundImage: `url(${slides[currentIndex]})`
-    }as React.CSSProperties,
+    } as React.CSSProperties,
 }
 
   return (

@@ -12,7 +12,7 @@ const Projects = () => {
         <Image width={50} height={50} src={wolf} alt='wolf'></Image>
         <h1>Projects</h1>
       </div>
-        {projects.map((res, index) => {              
+        {projects!.map((res, index) => {              
           return <Project key={res.id} name={res.name} description={res.description} github={res.github} mainPhoto={res.mainPhoto} photos={res.photos}/>
         })}
     </div>

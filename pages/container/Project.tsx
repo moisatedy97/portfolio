@@ -17,15 +17,15 @@ const Project = ({name, description, github, mainPhoto, photos } : Props) => {
   return (
     <div className={styles.tedy__project}>
       <div className={styles.tedy__project__title}>
-        <h1>{name}</h1>
-        <h3>{description}</h3>
-        <a href={github}>Github</a>
+        <h1>{name!}</h1>
+        <h3>{description!}</h3>
+        <a href={github!}>Github</a>
       </div>
       <div className={styles.tedy__project__container}>
         <div className={styles.tedy__project__container__slider}>
-          <ImageSlider slides={photos} />
+          <ImageSlider arraySlides={photos!} />
         </div>
-        <Image width='280vh' height='500vh' src={mainPhoto} alt='lalasiaiphone'></Image>
+        <Image width='280vh' height='500vh' src={mainPhoto!} alt='lalasiaiphone'></Image>
       </div>
     </div>    
   )
