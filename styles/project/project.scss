@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    margin-top: 3rem;
     .tedy__project__title {
         @include display(center, center, column);
         width: 100%;
@@ -47,6 +48,7 @@
 
 @media screen and (max-width: 1050px) {
     .tedy__project {
+        margin-top: 1rem;
         .tedy__project__container {
             @include display(center, center, column);
             .tedy__project__container__slider {

@@ -22,3 +22,8 @@ export {default as lalasia1} from './lalasia1.png';
 export {default as lalasia2} from './lalasia2.png';
 export {default as lalasia3} from './lalasia3.png';
 export {default as lalasia4} from './lalasia4.png';
+
+
+export {default as talknojutsuiphone} from './talknojutsu-iphone.png';
+export {default as talknojutsu1} from './talknojutsu1.png';
+export {default as talknojutsu2} from './talknojutsu2.png';
