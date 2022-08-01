@@ -27,3 +27,10 @@ export {default as lalasia4} from './lalasia4.png';
 export {default as talknojutsuiphone} from './talknojutsu-iphone.png';
 export {default as talknojutsu1} from './talknojutsu1.png';
 export {default as talknojutsu2} from './talknojutsu2.png';
+
+export {default as gpt3iphone} from './gpt3-iphone.png';
+export {default as gpt31} from './gpt31.png';
+export {default as gpt32} from './gpt32.png';
+export {default as gpt33} from './gpt33.png';
+export {default as gpt34} from './gpt34.png';
+export {default as gpt35} from './gpt35.png';
