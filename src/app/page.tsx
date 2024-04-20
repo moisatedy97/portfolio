@@ -1,27 +1,16 @@
 import { getAllProjects } from "@/server/db/queries";
-import ProjectImages from "./_components/project-images";
-import { getFilesFromDir } from "@/lib/utils";
+import Home from "./home";
+import Projects from "./projects";
 
-async function HomePage(): Promise<React.JSX.Element> {
+async function Index(): Promise<React.JSX.Element> {
   const data = await getAllProjects();
 
   return (
-    <main>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-      {data.map((project) => (
-        <div key={project.id}>
-          <div>{project.name}</div>
-          {project.imagesPath && (
-            <ProjectImages
-              projectId={project.id}
-              imagesPath={project.imagesPath}
-              images={getFilesFromDir(project.imagesPath)}
-            />
-          )}
-        </div>
-      ))}
+    <main className="flex h-full flex-col gap-64 py-48">
+      <Home />
+      <Projects />
     </main>
   );
 }
 
-export default HomePage;
+export default Index;

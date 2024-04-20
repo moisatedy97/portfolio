@@ -16,14 +16,13 @@ function ProjectImages({ projectId, imagesPath, images }: ProjectImagesProps): R
 
   return (
     <Carousel
-      className="w-[18rem] sm:w-[28rem]"
       plugins={[autoplay.current]}
       opts={{
         align: "start",
         loop: true
       }}
-      onMouseEnter={autoplay.current.stop}
-      onMouseLeave={autoplay.current.play}
+      // onMouseEnter={autoplay.current.stop}
+      // onMouseLeave={autoplay.current.play}
     >
       <CarouselContent>
         {images.map((image) => (

@@ -12,20 +12,35 @@ export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
 }
 
-/**
- * Asynchronously retrieves the names of all files within a specified directory.
- *
- * @param {string} dir - The directory path relative to the current working directory.
- * @returns {Promise<string[]>} A promise that resolves to an array of file names. Returns an empty array if an error occurs.
- */
-export const getFilesFromDir = (dir: string): string[] => {
+export const getFilesFromDir = (dirPath: string): string[] | null => {
   try {
-    const path = process.cwd() + "/public" + dir;
+    const path = process.cwd() + "/public" + dirPath;
     const fileNames = fs.readdirSync(path, "utf8");
-
     return fileNames;
   } catch (error) {
-    console.error(`Error fetching files from directory ${dir}: ${error}`);
-    return [];
+    if (error instanceof Error) {
+      console.error(error.message);
+    } else {
+      console.error("An unexpected error occurred");
+    }
+
+    return null;
+  }
+};
+
+export const getFileFromDir = (imagePath: string): string | null => {
+  try {
+    const path = process.cwd() + "/public" + imagePath;
+    const file = fs.readFileSync(path, "utf8");
+
+    return file;
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    } else {
+      console.error("An unexpected error occurred");
+    }
+
+    return null;
   }
 };

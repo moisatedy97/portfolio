@@ -75,14 +75,14 @@ export const databasesRelations = relations(databases, ({ many }) => ({
   projectsToDatabases: many(projectsToDatabases)
 }));
 
-export const other_utils = createTable("other_utils", {
+export const otherUtils = createTable("other_utils", {
   id: int("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
   name: text("name", { length: 256 }),
   image: text("image", { length: 1024 })
 });
 
-export const otherUtilsRelations = relations(other_utils, ({ many }) => ({
-  projectsToFrameworks: many(projectsToFrameworks)
+export const otherUtilsRelations = relations(otherUtils, ({ many }) => ({
+  projectsToOtherUtils: many(projectsToOtherUtils)
 }));
 
 export const socials = createTable("socials", {
@@ -105,8 +105,8 @@ export type Language = typeof languages.$inferSelect;
 export type NewLanguage = typeof languages.$inferInsert;
 export type Database = typeof databases.$inferSelect;
 export type NewDatabase = typeof databases.$inferInsert;
-export type OtherUtil = typeof other_utils.$inferSelect;
-export type NewOtherUtil = typeof other_utils.$inferInsert;
+export type OtherUtil = typeof otherUtils.$inferSelect;
+export type NewOtherUtil = typeof otherUtils.$inferInsert;
 export type Social = typeof socials.$inferSelect;
 export type NewSocial = typeof socials.$inferInsert;
 export type Company = typeof companies.$inferSelect;
@@ -212,7 +212,7 @@ export const projectsToOtherUtils = createTable(
   "projects_to_other_utils",
   {
     projectId: int("project_id", { mode: "number" }).references(() => projects.id),
-    otherUtilId: int("other_util_id", { mode: "number" }).references(() => other_utils.id)
+    otherUtilId: int("other_util_id", { mode: "number" }).references(() => otherUtils.id)
   },
   (t) => ({
     pk: primaryKey({
@@ -226,8 +226,8 @@ export const projectsToOtherUtilsRelations = relations(projectsToOtherUtils, ({ 
     fields: [projectsToOtherUtils.projectId],
     references: [projects.id]
   }),
-  otherUtil: one(other_utils, {
+  otherUtil: one(otherUtils, {
     fields: [projectsToOtherUtils.otherUtilId],
-    references: [other_utils.id]
+    references: [otherUtils.id]
   })
 }));
