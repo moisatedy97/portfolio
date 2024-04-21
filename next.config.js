@@ -6,10 +6,14 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
+  reactStrictMode: true,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
 
     return config;
+  },
+  eslint: {
+    ignoreDuringBuilds: true
   }
 };
 

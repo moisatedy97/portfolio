@@ -10,6 +10,9 @@
     "dev": "next dev",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "format": "prettier --write --ignore-path .gitignore .",
+    "format:check": "prettier --check --ignore-path .gitignore .",
+    "format:check:fix": "prettier --check --fix --ignore-path .gitignore .",
     "start": "next start",
     "prepare": "husky"
   },
@@ -19,6 +22,8 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@t3-oss/env-nextjs": "^0.9.2",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "better-sqlite3": "^9.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
