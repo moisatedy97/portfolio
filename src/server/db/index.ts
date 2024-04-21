@@ -12,8 +12,7 @@ const globalForDb = globalThis as unknown as {
   conn: Database.Database | undefined;
 };
 
-export const conn =
-  globalForDb.conn ?? new Database(env.DATABASE_URL, { fileMustExist: false });
+export const conn = globalForDb.conn ?? new Database(env.DATABASE_URL, { fileMustExist: false });
 if (env.NODE_ENV !== "production") globalForDb.conn = conn;
 
 export const db = drizzle(conn, { schema });

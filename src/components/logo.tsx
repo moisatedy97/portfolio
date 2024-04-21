@@ -5,7 +5,7 @@ function Logo(): React.JSX.Element {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 217.16 148.38"
-      className="stroke-primary h-36 w-36 fill-black dark:fill-white"
+      className="h-36 w-36 fill-black stroke-primary dark:fill-white"
     >
       <g id="Livello_2" data-name="Livello 2">
         <g id="Livello_1-2" data-name="Livello 1">
