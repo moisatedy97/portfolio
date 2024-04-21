@@ -10,7 +10,7 @@ async function OtherUtils({ projectId }: { projectId: number }): Promise<React.J
   if (otherUtils.length > 0) {
     return (
       <div className="flex items-start gap-4">
-        <Label className="text-primary-contrast w-24 text-base">Other Utils</Label>
+        <Label className="w-24 text-primary-contrast lg:text-base">Other Utils</Label>
         <div className="flex flex-1 flex-wrap gap-4">
           {otherUtils.map((otherUtil, index) => {
             const isValidPath = otherUtil.image ? getFileFromDir(otherUtil.image) !== null : false;
@@ -28,7 +28,7 @@ async function OtherUtils({ projectId }: { projectId: number }): Promise<React.J
                     />
                   </div>
                 )}
-                <p className="font-semibold">{otherUtil.name}</p>
+                <p className="text-sm font-semibold lg:text-base">{otherUtil.name}</p>
               </div>
             );
           })}

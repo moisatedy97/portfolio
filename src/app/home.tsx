@@ -1,7 +1,8 @@
-import React from "react";
-import Image from "next/image";
 import Logo from "@/components/logo";
+import Image from "next/image";
+import React from "react";
 import profilePicture from "../../public/images/profile.png";
+import Socials from "./socials";
 
 function Home(): React.JSX.Element {
   return (
@@ -21,7 +22,7 @@ function Home(): React.JSX.Element {
         <Logo />
         <h2 className="text-xl font-semibold text-black dark:text-white">Frontend Developer</h2>
       </div>
-      {/* <Socials /> */}
+      <Socials />
     </div>
   );
 }

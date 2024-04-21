@@ -10,7 +10,7 @@ async function Frameworks({ projectId }: { projectId: number }): Promise<React.J
   if (frameworks.length > 0) {
     return (
       <div className="flex items-start gap-4">
-        <Label className="text-primary-contrast w-24 text-base">Frameworks</Label>
+        <Label className="w-24 text-primary-contrast lg:text-lg">Frameworks</Label>
         <div className="flex flex-1 flex-wrap gap-4">
           {frameworks.map((framework, index) => {
             const isValidPath = framework.image ? getFileFromDir(framework.image) !== null : false;
@@ -28,7 +28,7 @@ async function Frameworks({ projectId }: { projectId: number }): Promise<React.J
                     />
                   </div>
                 )}
-                <p className="font-semibold">{framework.name}</p>
+                <p className="text-sm font-semibold lg:text-base">{framework.name}</p>
               </div>
             );
           })}

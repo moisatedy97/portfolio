@@ -34,7 +34,7 @@ function ProjectImages({ projectId, imagesPath, images }: ProjectImagesProps): R
                 fill={true}
                 priority={true}
                 sizes="(min-width: 1660px) 448px, (min-width: 1540px) calc(34vw - 110px), (min-width: 640px) 448px, 288px"
-                className="rounded-lg"
+                className="rounded-lg border border-primary dark:border-0"
               />
             </div>
           </CarouselItem>

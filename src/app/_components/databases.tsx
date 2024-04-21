@@ -10,7 +10,7 @@ async function Databases({ projectId }: { projectId: number }): Promise<React.JS
   if (databases.length > 0) {
     return (
       <div className="flex items-start gap-4">
-        <Label className="text-primary-contrast w-24 text-base">Databases</Label>
+        <Label className="w-24 text-primary-contrast lg:text-base">Databases</Label>
         <div className="flex flex-1 flex-wrap gap-4">
           {databases.map((database, index) => {
             const isValidPath = database.image ? getFileFromDir(database.image) !== null : false;
@@ -28,7 +28,7 @@ async function Databases({ projectId }: { projectId: number }): Promise<React.JS
                     />
                   </div>
                 )}
-                <p className="font-semibold">{database.name}</p>
+                <p className="text-sm font-semibold lg:text-base">{database.name}</p>
               </div>
             );
           })}

@@ -10,7 +10,7 @@ async function Libraries({ projectId }: { projectId: number }): Promise<React.JS
   if (libraries.length > 0) {
     return (
       <div className="flex items-start gap-4">
-        <Label className="text-primary-contrast w-24 text-base">Libraries</Label>
+        <Label className="w-24 text-primary-contrast lg:text-base">Libraries</Label>
         <div className="flex flex-1 flex-wrap gap-4">
           {libraries.map((library, index) => {
             const isValidPath = library.image ? getFileFromDir(library.image) !== null : false;
@@ -28,7 +28,7 @@ async function Libraries({ projectId }: { projectId: number }): Promise<React.JS
                     />
                   </div>
                 )}
-                <p className="font-semibold">{library.name}</p>
+                <p className="text-sm font-semibold lg:text-base">{library.name}</p>
               </div>
             );
           })}

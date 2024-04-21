@@ -10,7 +10,7 @@ async function Languages({ projectId }: { projectId: number }): Promise<React.JS
   if (languages.length > 0) {
     return (
       <div className="flex items-start gap-4">
-        <Label className="text-primary-contrast w-24 text-base">Languages</Label>
+        <Label className="w-24 text-primary-contrast lg:text-base">Languages</Label>
         <div className="flex flex-1 flex-wrap gap-4">
           {languages.map((language, index) => {
             const isValidPath = language.image ? getFileFromDir(language.image) !== null : false;
@@ -28,7 +28,7 @@ async function Languages({ projectId }: { projectId: number }): Promise<React.JS
                     />
                   </div>
                 )}
-                <p className="font-semibold">{language.name}</p>
+                <p className="text-sm font-semibold lg:text-base">{language.name}</p>
               </div>
             );
           })}

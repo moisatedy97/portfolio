@@ -7,7 +7,7 @@ async function Projects(): Promise<React.JSX.Element | undefined> {
 
   if (data.length > 0) {
     return (
-      <div>
+      <div className="flex flex-col gap-16">
         {data.map((project) => (
           <div key={project.id}>
             <Project project={project} />

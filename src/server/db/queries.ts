@@ -88,3 +88,15 @@ export const getProjectOtherUtils = async (projectId: number) => {
 
   return data;
 };
+
+export const getAllCompanies = async () => {
+  const data = await db.query.companies.findMany();
+
+  return data;
+};
+
+export const getAllSocials = async () => {
+  const data = await db.query.socials.findMany();
+
+  return data;
+};

@@ -94,7 +94,10 @@ export const socials = createTable("socials", {
 export const companies = createTable("companies", {
   id: int("id", { mode: "number" }).primaryKey({ autoIncrement: true }),
   name: text("name", { length: 256 }),
-  image: text("url", { length: 1024 })
+  image: text("url", { length: 1024 }),
+  image_width: int("image_width", { mode: "number" }),
+  image_height: int("image_height", { mode: "number" }),
+  image_sizes: text("image_sizes", { length: 256 })
 });
 
 export type Project = typeof projects.$inferSelect;
