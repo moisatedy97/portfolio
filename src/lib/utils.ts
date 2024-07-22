@@ -16,7 +16,8 @@ export const getFilesFromDir = (dirPath: string): string[] | null => {
   try {
     const path = process.cwd() + "/public" + dirPath;
     const fileNames = fs.readdirSync(path, "utf8");
-    return fileNames;
+    const pngFiles = fileNames.filter((fileName) => fileName.endsWith(".png"));
+    return pngFiles;
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
